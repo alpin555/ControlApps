@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Mon Con</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Record</string>
+    <string name="title_controls">Controls</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_dashboard_fragment">Hello Dashboard fragment</string>
+    <string name="hello_control_fragment">Hello Controls fragment</string>
+    <string name="hello_blank_fragment">Hello Home fragment</string>
+    <string name="name">Enter name</string>
+    
+    <array name="genres">
+        <item>Rock</item>
+        <item>Pop</item>
+    </array>
+</resources>

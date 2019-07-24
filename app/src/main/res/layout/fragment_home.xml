@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    tools:context=".HomeFragment"
+    android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/judul_chart1"
+                    android:text="Trend Electric Consumption Today (Rupiah)"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/tgl"
+                    android:text=""
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Realtime Monitoring Daily Consumption"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                </TableLayout>
+                
+                <LinearLayout
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="190dp"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:text="Consumption Today"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/volt"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Volt" />
+
+                                <TextView
+                                    android:id="@+id/nilaiVolt"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorLight"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:text="TKWH"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp" />
+
+                                <TextView
+                                    android:id="@+id/tkwh"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorLight"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:text="0.0"
+                                    android:padding="5dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:text="TCost"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tbiaya"
+                                    android:background="@color/colorLight"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:text="0.0"
+                                    android:padding="5dp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="190dp"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:text="Unit 1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_wb_incandescent_black_24dp"
+                                    android:visibility="visible"
+                                    android:padding="5dp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/amp1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Amp 1" />
+
+                                <TextView
+                                    android:id="@+id/nilaiAmp1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/watt1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Watt 1" />
+
+                                <TextView
+                                    android:id="@+id/nilaiWatt1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/kwh1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="KwH 1" />
+
+                                <TextView
+                                    android:id="@+id/nilaiKwh1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/cost1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="TCost 1" />
+
+                                <TextView
+                                    android:id="@+id/nilaiBiaya1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimary"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="190dp"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:text="Unit 2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_wb_incandescent_black_24dp"
+                                    android:visibility="visible"
+                                    android:padding="5dp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/amp2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Amp 2" />
+
+                                <TextView
+                                    android:id="@+id/nilaiAmp2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorAccent"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/watt2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Watt 2" />
+
+                                <TextView
+                                    android:id="@+id/nilaiWatt2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorAccent"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/kwh2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="KwH 2" />
+
+                                <TextView
+                                    android:id="@+id/nilaiKwh2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorAccent"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/cost2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="TCost 2" />
+
+                                <TextView
+                                    android:id="@+id/nilaiBiaya2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorAccent"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="190dp"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:text="Unit 3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_wb_incandescent_black_24dp"
+                                    android:visibility="visible"
+                                    android:padding="5dp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/amp3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Amp 3" />
+
+                                <TextView
+                                    android:id="@+id/nilaiAmp3"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/watt3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Watt 3" />
+
+                                <TextView
+                                    android:id="@+id/nilaiWatt3"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/kwh3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="KwH 3" />
+
+                                <TextView
+                                    android:id="@+id/nilaiKwh3"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorLight"
+                                android:layout_margin="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/cost3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="TCost 3" />
+
+                                <TextView
+                                    android:id="@+id/nilaiBiaya3"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:textColor="@color/colorWhite"
+                                    android:gravity="center"
+                                    android:minEms="3"
+                                    android:padding="5dp"
+                                    android:text="0.0"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+        </ScrollView>
+
+</LinearLayout>

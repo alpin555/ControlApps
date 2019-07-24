@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_weight="20"
+        android:id="@+id/datets"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:id="@+id/watts1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:id="@+id/watts2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:id="@+id/watts3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:id="@+id/volt"/>
+
+</LinearLayout>
